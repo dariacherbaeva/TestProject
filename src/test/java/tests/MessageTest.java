@@ -15,6 +15,6 @@ public class MessageTest extends TestBase {
         app.getLogInHelper().logIn(user);
         app.getMessageHelper().sendMessage(message);
         app.getLogInHelper().logOut();
-        app.terminate();
+        //app.terminate();
     }
 }

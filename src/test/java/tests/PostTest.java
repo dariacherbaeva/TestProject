@@ -2,6 +2,7 @@ package tests;
 
 import data.SystemPostData;
 import data.UserData;
+import org.junit.Assert;
 
 public class PostTest extends TestBase {
     @Override
@@ -14,5 +15,7 @@ public class PostTest extends TestBase {
         app.getPostHelper().newSystemPost(systemPostData);
         app.getLogInHelper().logOut();
         app.terminate();
+        //Assert.assertEquals(systemPostData.text, app.getPostHelper().getCreatedPostData().text);
+        //Assert.assertEquals(systemPostData.theme, app.getPostHelper().getCreatedPostData().theme);
     }
 }

@@ -11,6 +11,16 @@ public class PostHelper extends HelperBase {
         super(manager);
     }
 
+    public SystemPostData getCreatedPostData() {
+        String postText = manager.getDriver().findElementByName("id_text").getAttribute("value");
+        String postTheme = manager.getDriver().findElementByName("id_theme").getAttribute("value");
+        return new SystemPostData(postText, postTheme);
+    }
+
+    //public SystemPostData selectLastCreatedPostData() {
+    //   return new SystemPostData();
+    //}
+
     public void newSystemPost(SystemPostData systemPostData) {
         manager.getDriver().findElement(By.linkText("Игра")).click();
         manager.getDriver().findElement(By.linkText("Обсуждения")).click();

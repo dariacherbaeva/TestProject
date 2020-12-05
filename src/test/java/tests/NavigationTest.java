@@ -5,6 +5,6 @@ public class NavigationTest extends TestBase {
     public void testCase() {
         app.getNavigationHelper().openPage();
         app.getNavigationHelper().setWindowSize();
-        app.terminate();
+        //app.terminate();
     }
 }
