@@ -7,4 +7,9 @@ public class NavigationTest extends TestBase {
         app.getNavigationHelper().setWindowSize();
         //app.terminate();
     }
+
+    @Override
+    public void additionalSetup() {
+
+    }
 }
